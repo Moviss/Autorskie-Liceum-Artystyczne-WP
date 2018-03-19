@@ -1,0 +1,938 @@
+/*
+ Theme Name: Liceum Ogólnokształcące Artystyczne
+ Author: Marcin Lubowicz
+ Version: 1.0
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ececec;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-areas: "header"
+                         "main"
+                         "kafle"
+                         "stopka";
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-areas: "logo"
+                         "nav";
+    background-color: #ffffff;
+}
+
+
+
+.logo {
+    grid-area: logo;
+    background-color: #ffffff;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    padding: 0.5em 2em 0.5em 4em;
+}
+
+.logo-text {
+    float: right;
+    display: none;
+}
+
+.nav {
+    grid-area: nav;
+    height: 0px;
+}
+
+.hamburger {
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 45px;
+    padding: 15px 10px 0px 15px;
+    color: #60a5bc;
+    border: 0;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    z-index: 10000000000000;
+}
+
+.cross {
+    background: none;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    padding: 30px 11px 0px 15px;
+    color: #60a5bc;
+    border: 0;
+    font-size: 4.5em;
+    line-height: 65px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    z-index: 10000000000000;
+}
+
+.menu {
+    z-index: 1000000;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    font-size: 1em;
+    width: 100%;
+    background: #f1f1f1;
+    position: absolute;
+    text-align: center;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+}
+
+.menu li {
+    display: block;
+    padding: 15px 0 15px 0;
+    border-bottom: #dddddd 1px solid;
+}
+
+.menu li:hover {
+    display: block;
+    background: #ffffff;
+    padding: 15px 0 15px 0;
+    border-bottom: #dddddd 1px solid;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    margin: 0px;
+    color: #d2d217;
+}
+
+.menu ul li a:hover {
+    color: #d2d217;
+    text-decoration: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #d2d217;
+}
+
+.menu a:hover {
+    text-decoration: none;
+    color: #d2d217;
+}
+
+ul ul {
+    display: none;
+}
+
+
+.main {
+    display: grid;
+    grid-area: main;
+    grid-template-areas: "main-img"
+                         "info-main-motto"
+                         "info-main-text"
+                         "button-rekrutacja";
+}
+
+.info-main-motto {
+    grid-area: info-main-motto;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    text-align: center;
+    background-color: #60a5bc;
+    font-family: 'Caveat', cursive;
+    font-size: 1.8em;
+}
+
+.rotated {
+    transform: rotate(-10deg);
+    color: #ffffff;
+}
+
+.rotated-color {
+    color: #bbd501;
+    padding-left: 5px;
+    background-color: transparent;
+}
+
+.info-main-text {
+    grid-area: info-main-text;
+    background-color: #60a5bc;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 0.75em;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+    padding-bottom: 1.5em;
+    text-align: center;
+    line-height: 1.6em;
+    color: #ffffff;
+}
+
+.button-rekrutacja {
+    grid-area: button-rekrutacja;
+    background-color: #60a5bc;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.button-rekrutacja img {
+    cursor: pointer;
+    height: 2em;
+    width: 8em;
+}
+
+.main-img {
+    grid-area: main-img;
+}
+
+.main-news {
+    display: none;
+}
+
+.post-date {
+    text-align: right;
+}
+
+.kafle {
+    grid-area: kafle;
+    display: grid;
+    grid-template-areas: "kafel-onas kafel-kadra"
+                         "kafel-program kafel-program"
+                         "kafel-dlakogo kafel-aplikuj";
+    padding: 2em 2em;
+}
+
+.kafle img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+#kafel-onas {
+    grid-area: kafel-onas;
+    margin: 0em 0.25em 0.4em 0em;
+    transition: all .2s ease-in-out;
+}
+
+#kafel-kadra {
+    grid-area: kafel-kadra;
+    margin: 0em 0em 0.4em 0.25em;
+    transition: all .2s ease-in-out;
+}
+
+#kafel-program {
+    grid-area: kafel-program;
+    margin: 0em 0em 0.4em 0em;
+    transition: all .2s ease-in-out;
+}
+
+#kafel-dlakogo {
+    grid-area: kafel-dlakogo;
+    margin: 0em 0.25em 0em 0em;
+    transition: all .2s ease-in-out;
+}
+
+#kafel-aplikuj {
+    grid-area: kafel-aplikuj;
+    margin: 0em 0em 0em 0.25em;
+    transition: all .2s ease-in-out;
+}
+
+#kafel-onas:hover {
+    transform: scale(1.025);
+}
+
+#kafel-kadra:hover {
+    transform: scale(1.025);
+}
+
+#kafel-program:hover {
+    transform: scale(1.025);
+}
+#kafel-dlakogo:hover {
+    transform: scale(1.025);
+}
+#kafel-aplikuj:hover {
+    transform: scale(1.025);
+}
+
+.stopka {
+    grid-area: stopka;
+    background-color: #4e4e4d;
+    padding: 1em;
+    display: grid;
+    grid-template-areas: "footer-text"
+                         "footer-logo";
+}
+
+.footer-text {
+    grid-area: footer-text;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    margin: 10px auto 0 auto;
+
+}
+
+.footer-logo {
+    grid-area: footer-logo;
+    text-align: center;
+    margin: 10px auto 0 auto;
+}
+
+/**
+ * 8.0 Alignments
+ */
+
+.alignleft {
+	display: inline;
+	float: left;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+}
+
+.aligncenter {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+blockquote.alignleft,
+.wp-caption.alignleft,
+img.alignleft {
+	margin: 0.4em 1.6em 1.6em 0;
+}
+
+blockquote.alignright,
+.wp-caption.alignright,
+img.alignright {
+	margin: 0.4em 0 1.6em 1.6em;
+}
+
+blockquote.aligncenter,
+.wp-caption.aligncenter,
+img.aligncenter {
+	clear: both;
+	margin-top: 0.4em;
+	margin-bottom: 1.6em;
+}
+
+.wp-caption.alignleft,
+.wp-caption.alignright,
+.wp-caption.aligncenter {
+	margin-bottom: 1.2em;
+}
+
+
+
+/* tablet */
+
+@media (max-width: 1050px) and (min-width: 500px) {
+
+    .grid {
+        grid-template-areas: "header"
+                             "main"
+                             "kafle"
+                             "stopka";
+    }
+
+    .header {
+        grid-template-areas: "logo"
+                             "nav";
+    }
+
+    .main {
+        grid-auto-columns: 1fr 1fr;
+        grid-template-areas: "main-img main-img"
+                             "info-main-text info-main-motto"
+                             "info-main-text button-rekrutacja";
+    }
+
+    .main.image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-main-text {
+        padding-top: 2em;
+        font-size: 1em;
+    }
+
+    .kafle {
+        grid-area: kafle;
+        display: grid;
+        grid-template-areas: "kafel-onas kafel-kadra kafel-dlakogo"
+                             "kafel-program kafel-program kafel-aplikuj";
+        padding: 2em 4em;
+    }
+
+    #kafel-onas {
+        grid-area: kafel-onas;
+        margin: 0em 0.25em 0.4em 0em;
+    }
+
+    #kafel-kadra {
+        grid-area: kafel-kadra;
+        margin: 0em 0.25em 0.4em 0.25em;
+    }
+
+    #kafel-program {
+        grid-area: kafel-program;
+        margin: 0em 0.25em 0.4em 0em;
+    }
+
+    #kafel-dlakogo {
+        grid-area: kafel-dlakogo;
+        margin: 0em 0em 0.4em 0.25em;
+    }
+
+    #kafel-aplikuj {
+        grid-area: kafel-aplikuj;
+        margin: 0em 0em 0em 0.25em;
+    }
+
+    .stopka {
+        grid-template-areas: "footer-text footer-logo";
+    }
+
+    .footer-text {
+        text-align: center;
+        float: left;
+        margin: 0 10px 0 20%;
+    }
+
+    .footer-logo {
+        float: left;
+        margin: 0 20% 0 10px;
+    }
+
+}
+
+/*laptop */
+
+@media (min-width: 1050px) and (max-width: 1300px) {
+
+    .grid {
+        grid-template-areas: "header"
+                             "main"
+                             "news"
+                             "kafle"
+                             "stopka";
+    }
+
+    .header {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "logo nav";
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .cross {
+        display: none;
+    }
+
+    .nav {
+        background-color: #ffffff;
+        padding: 0.5em 0em 0.5em 0em;
+    }
+
+    .menu {
+        margin-left: 0;
+        text-align: center;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+        font-size: 0.80em;
+        width: auto;
+        background-color: #ffffff;
+    }
+
+    .menu a {
+        color: #66b2ba;
+    }
+
+
+    .menu ul li {
+        display: block;
+        list-style-type: none;
+        width: auto;
+        padding: 3px 10px;
+        border-bottom: none;
+        text-align: left;
+    }
+
+    .menu li {
+        border-bottom: none;
+    }
+
+    ul > li {
+        display: block;
+        float: left;
+        width: 7em;
+        margin: 0 0em;
+        border-bottom: none;
+    }
+
+    .menu li:hover {
+        color: #cece1c;
+        transform: scale(1.1);
+        border-bottom: none;
+    }
+
+
+    ul > li > ul > li:hover {
+        transform: none;
+        padding: 0;
+    }
+
+    .menu li {
+        display: block;
+        padding: 15px 0 15px 0;
+    }
+    .menu li:hover {
+        display: block;
+        background: #ffffff;
+        padding: 15px 0 15px 0;
+    }
+
+    ul > li ul {
+        padding: 0;
+        position: absolute;
+        display: none;
+        left: 0px;
+        top: 35px;
+        width: 210px;
+        text-align: center;
+        background-color: #ccca26;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        margin: 0px;
+        color: #ffffff;
+        background-color: #ccca26;
+    }
+    .menu ul li a:hover {
+        color: #ffffff;
+        text-decoration: none;
+        background-color: #ccca26;
+    }
+
+    ul li:hover > ul {
+        display: block;
+    }
+
+    .sub-menu li {
+        display: block;
+        padding: 3px 0 3px 0;
+    }
+
+    .sub-menu li:hover {
+        font-weight: bold;
+        display: block;
+        background: #ccca26;
+        padding: 3px 10px 3px 10px;
+        transform: none;
+    }
+
+    ul > li ul li {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        float: none;
+        color: #ffffff;
+    }
+
+    ul > li ul li a {
+        padding: 2px 0px;
+        color: #fff;
+        text-decoration: none;
+        display: block;
+    }
+
+    ul > li ul li a:hover,
+    ul > li ul li:hover > a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "info-main-motto main-img"
+                             "info-main-text main-img"
+                             "button-rekrutacja main-img";
+    }
+
+    .info-main-motto {
+        font-size: 2em;
+        padding: 2em 0 0 0;
+    }
+
+    .info-main-text {
+        padding: 1em 4em;
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    .news {
+        grid-area: news;
+        display: grid;
+        margin: 3em 9em;
+        background-color: #ffffff;
+
+    }
+
+    .main-news {
+        display: grid;
+        grid-area: main-news;
+        height: auto;
+        width: auto;
+    }
+
+    .news-title {
+        font-family: 'Ubuntu Condensed', sans-serif;
+        font-size: 2em;
+        display: inline-block;
+        width: auto;
+        height: 25px;
+        padding: 0.5em 0 0.5em 0;
+        margin-left: 1em;
+        border-bottom: 1px solid #8c8b8b;
+        margin-right: 1em;
+    }
+
+    .czytaj {
+        height: 20px;
+        width: 100px;
+        margin: -20px -50px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        background-color: #d9d9d9;
+        text-align: center;
+    }
+
+    .news-content {
+        text-align: justify;
+        padding: 0 1em 1em 1em;
+        margin: 0 2em;
+    }
+
+    .kafle {
+        grid-area: kafle;
+        display: grid;
+        grid-template-areas: "kafel-onas kafel-kadra kafel-dlakogo"
+                             "kafel-program kafel-program kafel-aplikuj";
+        padding: 2em 14em;
+    }
+
+    #kafel-onas {
+        grid-area: kafel-onas;
+        margin: 0em 0.25em 0.4em 0em;
+    }
+
+    #kafel-kadra {
+        grid-area: kafel-kadra;
+        margin: 0em 0.25em 0.4em 0.25em;
+    }
+
+    #kafel-program {
+        grid-area: kafel-program;
+        margin: 0em 0.25em 0.4em 0em;
+    }
+
+    #kafel-dlakogo {
+        grid-area: kafel-dlakogo;
+        margin: 0em 0em 0.4em 0.25em;
+    }
+
+    #kafel-aplikuj {
+        grid-area: kafel-aplikuj;
+        margin: 0em 0em 0em 0.25em;
+    }
+
+
+    .stopka {
+        grid-template-areas: "footer-text footer-logo";
+    }
+
+}
+
+@media (min-width:1300px) {
+    .grid {
+        grid-template-areas:
+            "header"
+            "main"
+            "news"
+            "kafle"
+            "stopka";
+    }
+
+    .header {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "logo nav";
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .cross {
+        display: none;
+    }
+
+    .nav {
+        background-color: #ffffff;
+        padding: 0.5em 0em 0.5em 0em;
+    }
+
+    .menu {
+        margin-left: 0;
+        text-align: center;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+        font-size: 0.95em;
+        width: auto;
+        background-color: #ffffff;
+    }
+
+    .menu a {
+        color: #66b2ba;
+    }
+
+
+    .menu ul li {
+        display: block;
+        list-style-type: none;
+        width: auto;
+        padding: 3px 10px;
+        border-bottom: none;
+        text-align: left;
+    }
+
+    .menu li {
+        border-bottom: none;
+    }
+
+    ul > li {
+        display: block;
+        float: left;
+        width: 8.5em;
+        margin: 0 0em;
+        border-bottom: none;
+    }
+
+    .menu li:hover {
+        color: #cece1c;
+        transform: scale(1.1);
+        border-bottom: none;
+    }
+
+
+    ul > li > ul > li:hover {
+        transform: none;
+        padding: 0;
+    }
+
+    .menu li {
+        display: block;
+        padding: 15px 0 15px 0;
+    }
+
+    .menu li:hover {
+        display: block;
+        background: #ffffff;
+        padding: 15px 0 15px 0;
+    }
+
+    ul > li ul {
+        padding: 0;
+        position: absolute;
+        display: none;
+        left: 0px;
+        top: 35px;
+        width: 240px;
+        text-align: center;
+        background-color: #ccca26;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        margin: 0px;
+        color: #ffffff;
+        background-color: #ccca26;
+    }
+
+    .menu ul li a:hover {
+        color: #ffffff;
+        text-decoration: none;
+        background-color: #ccca26;
+    }
+
+    ul li:hover > ul {
+        display: block;
+    }
+
+    .sub-menu li {
+        display: block;
+        padding: 3px 0 3px 0;
+    }
+
+    .sub-menu li:hover {
+        font-weight: bold;
+        display: block;
+        background: #ccca26;
+        padding: 3px 10px 3px 10px;
+        transform: none;
+    }
+
+    ul > li ul li {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        float: none;
+        color: #ffffff;
+    }
+
+    ul > li ul li a {
+        padding: 2px 0px;
+        color: #fff;
+        text-decoration: none;
+        display: block;
+    }
+
+    ul > li ul li a:hover,
+    ul > li ul li:hover > a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "info-main-motto main-img"
+                             "info-main-text main-img"
+                             "button-rekrutacja main-img";
+    }
+
+    .info-main-motto {
+        font-size: 2.5em;
+        padding: 2em 0 0 0;
+    }
+
+    .info-main-text {
+        padding: 0em 5em;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .button-rekrutacja img {
+        cursor: pointer;
+        width: 10em;
+        height: auto;
+    }
+
+    .news {
+        grid-area: news;
+        display: grid;
+        margin: 3em auto;
+        background-color: #ffffff;
+        width: 1000px;
+        height: auto;
+
+    }
+
+    .main-news {
+        display: grid;
+        grid-area: main-news;
+    }
+
+    .news-title {
+        font-family: 'Ubuntu Condensed', sans-serif;
+        font-size: 2em;
+        display: inline-block;
+        width: auto;
+        height: 25px;
+        padding: 0.5em 0 0.5em 0;
+        margin-left: 1em;
+        border-bottom: 1px solid #8c8b8b;
+        margin-right: 1em;
+    }
+
+    .czytaj {
+        height: 20px;
+        width: 100px;
+        margin: 0px -50px;
+        position: relative;
+        top: -100%;
+        left: 50%;
+        background-color: #d9d9d9;
+        text-align: center;
+    }
+
+    .news-content {
+        text-align: justify;
+        margin: 1em 1em 1em 1em;
+        height: auto;
+        /* padding: 0 1em 1em 1em; */
+    }
+
+    .kafle {
+        grid-area: kafle;
+        display: grid;
+        grid-template-areas: "kafel-onas kafel-kadra kafel-dlakogo"
+            "kafel-program kafel-program kafel-aplikuj";
+        padding: 2em 14em;
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    #kafel-onas {
+        grid-area: kafel-onas;
+        margin: 0em 0.25em 0.4em 0em;
+    }
+
+    #kafel-kadra {
+        grid-area: kafel-kadra;
+        margin: 0em 0.25em 0.4em 0.25em;
+    }
+
+    #kafel-program {
+        grid-area: kafel-program;
+        margin: 0em 0.25em 0.4em 0em;
+    }
+
+    #kafel-dlakogo {
+        grid-area: kafel-dlakogo;
+        margin: 0em 0em 0.4em 0.25em;
+    }
+
+    #kafel-aplikuj {
+        grid-area: kafel-aplikuj;
+        margin: 0em 0em 0em 0.25em;
+    }
+
+    .stopka {
+        grid-template-areas: "footer-text footer-logo";
+    }
+
+}
